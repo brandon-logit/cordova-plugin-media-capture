@@ -268,15 +268,17 @@
         if ([pickerController respondsToSelector:@selector(cameraCaptureMode)]) {
             pickerController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModeVideo;
             
-            if ([quality intValue] == 0) {
-                pickerController.videoQuality = UIImagePickerControllerQualityTypeLow;
-            } else if ([quality intValue] == 1) {
-                pickerController.videoQuality = UIImagePickerControllerQualityTypeMedium;
-            } else if ([quality intValue] == 2) {
-                pickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
-            } else {
-                pickerController.videoQuality = UIImagePickerControllerQualityTypeMedium;
-            }
+            pickerController.videoQuality = UIImagePickerControllerQualityTypeMedium;
+
+            // if ([quality intValue] == 0) {
+            //     pickerController.videoQuality = UIImagePickerControllerQualityTypeLow;
+            // } else if ([quality intValue] == 1) {
+            //     pickerController.videoQuality = UIImagePickerControllerQualityTypeMedium;    
+            // } else if ([quality intValue] == 2) {
+            //     pickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
+            // } else {
+            //     pickerController.videoQuality = UIImagePickerControllerQualityTypeMedium;
+            // }
 
             // pickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
             // pickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
