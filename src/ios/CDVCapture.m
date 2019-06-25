@@ -270,8 +270,12 @@
             
             if ([quality intValue] == 0) {
                 pickerController.videoQuality = UIImagePickerControllerQualityTypeLow;
-            } else {
+            } else if ([quality intValue] == 1) {
+                pickerController.videoQuality = UIImagePickerControllerQualityTypeMedium;
+            } else if ([quality intValue] == 2) {
                 pickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
+            } else {
+                pickerController.videoQuality = UIImagePickerControllerQualityTypeMedium;
             }
 
             // pickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
